@@ -1,22 +1,22 @@
 import React from 'react';
 import UserBar from '../shared/userBar/UserBar';
-import BodyContent from './bodyContent/BodyContent';
+import BodyProjectContent from './projectContent/BodyProjectContent';
 import { UserMenuProps } from '@/app/types/types';
 
-const MainScreen = () => {
+const ProjectsScreen = () => {
   const currentUser: UserMenuProps['currentUser'] = {
     name: 'Nombre Estático',
     email: 'correo@ejemplo.com',
     image: 'url_de_la_imagen',
-    page: 'Inicio',
+    page: 'Projects',
   };
-  
+
   return (
     <div className="md:flex flex-col hidden w-4/5 bg-white h-full">
       <UserBar currentUser={currentUser} />
-      <BodyContent />
+      <BodyProjectContent />
     </div>
   );
 };
 
-export default MainScreen;
+export default ProjectsScreen;
